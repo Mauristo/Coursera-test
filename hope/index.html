@@ -81,10 +81,11 @@
         font-size: 1.1em;
         color: #FF1493;
         text-align: center;
-    }
-    #services .servi ol{
-        list-style-type: none;
-        
+        background-color: #FFFFFF;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        text-align: center;
+        font-weight: bold;        
     }
     
     #services .services_box{
@@ -94,57 +95,50 @@
         height: 230px;
         margin-top: 15px;
         margin: 10px;
-        padding: 0px;
-
-
-
-
-        
-        
+        padding: 0px;        
     }
     
-    #services h4 {
-        background-color: #FFFFFF;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        text-align: center;
-        font-weight: bold;
 
-    }
     #services .container ul li span {
     	font-size: 1.2em;
     	color:  #8a2be2;
     } 
 
-    
+	    /*******    tiles    *******/
+	#map_tile, #pricing_tile, #Site_photos_tile {
+ 		height: 250px;
+ 		width: 100%;
+ 		margin-bottom: 15px;
+ 		position: relative;
+ 		border: 2px solid #3F0C1F;
+ 		overflow: hidden;
+ 		border-radius: 5px;
+	}
+	#map_tile:hover, #pricing_tile:hover,#Site_photos_tile:hover {
+ 		box-shadow: 0 1px 5px 1px #cccccc;
+		}
 
+	#Site_photos_tile {
+  		background: url('https://i.ibb.co/7C7vzpR/IMG-20210717-WA0031.jpg?w=940&h=650&auto=compress&cs=tinysrgb') no-repeat;
+  		background-position: center;
+	}
+	#pricing_tile {
+ 		background: url('https://i.ibb.co/hWTqv75/plan-pricing-page.jpg') no-repeat;
+  		background-position: center;
+	}
 
-    
-    
-	    
-	    /*******    maps    *******/
-	    
-	#maps p>iframe{
-	    width: 70%;
-	    height: 450px;
-	    
-	}    
-	    
-	    
-	    
-	    @media (max-width: 400px){
-	        #maps p>iframe{
-	            width: 100%;
-	        }
-	        .contact{
-	         width: 95%;
-
-	        }
-	        
-	        
-	    }
-
-	    
+	#map_tile span, #pricing_tile span, #Site_photos_tile span {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 1.6em;
+		text-transform: capitalize;
+		background-color: #000;
+		color: #fff;
+		opacity: .8;
+	}	    
 	    
 	    /***** contact ******/
 	#contact{
@@ -159,9 +153,6 @@
 	    
 	}
 	
-	#contact .email{
-	    font-size: 2em;
-	}
 	#contact ul .lastchild i{
 	    color: #fb3958;
 	}
@@ -191,8 +182,8 @@
 	}
 	#contact hr{
 		color: white;
-		margin-left: 20%;
-		margin-right: 20%;
+		margin-left: 15%;
+		margin-right: 15%;
 	}
 	#contact .copyright{
 		background-color: #000000;;
@@ -206,6 +197,7 @@
 	    position: fixed;
 	    bottom: 8px;
         right: 16px;
+        font-size: 1.5em;
 	}
 	#contact .contact3{
 		text-align: center;
@@ -227,7 +219,14 @@
     	max-width: 240px;
     	height: 200px;
     }
-    #contact h5, h6, ul, p{
+    #tiles .row .picha{
+    	padding: 0px;
+    	border: 0px;
+    }
+    #map_tile{
+    	border: 0px;
+    }
+    #contact h5, h6, #contact ul, p{
     	text-align: center;
     	margin-right: auto;
     	margin-left: auto;
@@ -240,16 +239,11 @@
     #slideshow .carousel-caption h5{
     	font-size: 1.2em;
     }     	
-        
-    
-    #maps p>iframe{
-	    width: 80%;   
-    }    
-     
+
     #services .services_box{
     	max-width: 250px;
     } 
-    #contact h5, h6, ul, p{
+    #contact h5, h6, #contact ul, p{
     	text-align: center;
     }        
         
@@ -264,19 +258,11 @@
 
     #slideshow .carousel-caption h5{
     	font-size: 1.3em;
-    }     	
-
-    
-    #maps p>iframe{
-	    width: 90%;   
-    }    
+    }     	  
     
     #services .services_box{
     	max-width: 280px;
-    }
-    #contact .contact{
-        border: 2px solid #B0E0E6;
-    }        
+    }     
         
         
     }
@@ -285,52 +271,35 @@
     @media (min-width: 992px) and (max-width: 1199.98px){ 
     
     .navbar-brand{
-	    margin-right: 100px;
+	    width: 76%;
     }
     #slideshow .carousel-caption h5{
     	font-size: 1.7em;
-    } 
-        
-    
-    #maps p>iframe{
-	    width: 80%;   
-    }    
+    }   
     #services .services_box{
     	max-width: 215px;
     }
-    #contact .contact{
-        border: 2px solid #B0E0E6;
-    }
+
         
     }
 
 /*** Extra large devices (large desktops, 1200px and up) **/
     @media (min-width: 1200px) { 
-    
     .navbar-brand{
-	    margin-right: 160px;
+	    width: 76%;
     }
     #slideshow .carousel-caption h5{
     	font-size: 2em;
     }        
-
-
-        
-    
-    #maps p>iframe{
-	    width: 80% ;   
-    }        
-   
         
     #services .services_box{
     	max-width: 230px
     }
-    #contact .contact{
-        border: 2px solid #B0E0E6;
-    }        
-        
-        
-        
+    #tiles .picha img{
+    	max-width: 230px;
+    	height: 250px;
+    }     
+
     }
 	    
 	</style>
@@ -352,12 +321,6 @@
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="#maps">Maps</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#pictures_from_different_angles">Pictures from different angles</a>
-    	  </li>
-    	  <li class="nav-item">
-    	    <a class="nav-link" href="#time">Working hours</a>
 	      </li> 
 	      <li class="nav-item">
 	        <a class="nav-link" href="#contact">Contact</a>
@@ -409,7 +372,7 @@
     			</ul>
    				</div>
    				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 services_box">
-   					<h4>Bronze package</h4>
+   					<h4>Sliver package</h4>
    				<ul>	
     				<li><i class="bi bi-stopwatch-fill"></i> 10 Minutes</li>
     				<li><span> Bronze package ➕</span></li>
@@ -440,35 +403,46 @@
    				</div>
    			</div><!--End of row div-->
    		</div>
-   		</section>
-    	<section id="pricing">
-  		 <h2 class="hi">Pricing</h2>
-  		 <a><h5>Bronze Package</h5></a>
-  		    <div> Compact Ksh: 100</div>
-            <div>Saloon Ksh: </div>
-	        <div>SUV Ksh:  </div>
-  		 <a><h5>Silver Package</h5></a>
-  		    <div> Compact Ksh: 100</div>
-            <div>Saloon Ksh: </div>
-	        <div>SUV Ksh:  </div>  		 
-  		 <a><h5>Gold Package</h5></a>
-  		    <div> Compact Ksh: 100</div>
-            <div>Saloon Ksh: </div>
-	        <div>SUV Ksh:  </div>  		 
-  		 <a><h5>Platinum Package</h5></a>
-  		    <div> Compact Ksh: 100</div>
-            <div>Saloon Ksh: </div>
-	        <div>SUV Ksh:  </div>  		 
-    	</section>   		
+   	</section>
+   				 			<!--<h2 class="hi">Pricing</h2>
+  		 			<h5>Bronze Package</h5>
+  		    
+            		<div>Saloon Ksh: </div>
+	        		<div>SUV Ksh:  </div>
+			  		<h5>Silver Package</h5>
+  				
+    			    <div>Saloon Ksh: </div>
+	        		<div>SUV Ksh:  </div>  		 
+  					<h5>Gold Package</h5>
+  					
+        			<div>Saloon Ksh: </div>
+	    			<div>SUV Ksh:  </div>  		 
+  					<h5>Platinum Package</h5>
+  					
+        			<div>Saloon Ksh: </div>
+	    			<div>SUV Ksh:  </div>-->
 
-    	<section id="maps" class="hi"> 
-	    	<h2>Maps</h2>
-	
-    		<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9342916063365!2d36.77628949782474!3d-1.206152665018847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f22b49245bba3%3A0x822245779115e8ad!2sSlaughter%2FBypass!5e0!3m2!1sen!2ske!4v1625595559631!5m2!1sen!2ske" loading="lazy"></iframe></p>
-    	</section>
-    	<section id="pictures_from_different_angles">
-  		 <h2 class="hi">Pictures from different angles</h2>
-    	</section>
+
+
+
+
+    	<div id="tiles" class="container">	
+    		<div class="row">
+   			
+    			<div class="col-md-4 col-sm-6 col-xs-12">
+    				<a href="pricing-category.html"><div id="pricing_tile"><span>Pricing</span></div></a>
+	    		</div>			  		 		
+    			<div class="col-md-4 col-sm-6 col-xs-12">
+    				<a href="Site_photos-category.html"><div id="Site_photos_tile"><span>Site photos</span></div></a>
+  		 		</div>
+    			<div class="col-md-4 col-sm-12 col-xs-12 picha"> 
+
+    				<a href="https://www.google.com/maps/place/Slaughter%2FBypass,+Ruaka/@-1.20578,36.78005,17z/data=!4m6!1m3!3m2!1s0x182f22b49245bba3:0x822245779115e8ad!2sSlaughter%2FBypass,+Ruaka!3m1!1s0x182f22b49245bba3:0x822245779115e8ad" target="_blank"><div id="map_tile"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.678989632288!2d36.77043696289063!3d-1.216034476703704!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x822245779115e8ad!2sSlaughter%2FBypass!5e0!3m2!1sen!2ske!4v1629139180145!5m2!1sen!2ske" width="100%" height="250" style="border:0;" allowfullscreen></iframe><span>map</span></div></a>
+    			</div>  		 			
+    		</div>
+    	</div>
+
+
 	</main>
     <section id="contact">
     	<div class="container">
@@ -482,7 +456,6 @@
     		    	<p>Opens at 7:00am</p>
     		    	<p>Closes at 7:30pm</p><br>
     	   			 <hr class="d-block d-sm-none">
-    	   			 <hr class="d-none d-sm-block d-md-none">
     	</div>	
         <div class="col-sm-6 col-md-4 contact contact2" >
         <h5>Follow us on</h5>
@@ -494,12 +467,11 @@
     	    </ul> 
     	<h5 class="wewe">Send us an email</h5>
     	    <ul><li><a href="mailto:alphakingscarwash@gmail.com" class="email"><i class="bi bi-chat-dots-fill"></i></a></li></ul> 
-    	    <hr class="d-block d-sm-none">
-    	    <hr class="d-none d-sm-block d-md-none">     
+    	    <hr class="d-block d-sm-none">     
     	</div>
     	<div class="col-sm-6 col-md-4 contact contact3">
-    	<h5> Give us a call</h5>
-    	    <a href="tell:+2547049300307"><i class="bi bi-telephone-outbound"></i> +254 704 930 307</a>	
+    	<h5><hr class="d-none d-sm-block d-md-none"> Give us a call</h5>
+    	    <a href="tell:08887049300307"><i class="bi bi-telephone-outbound"></i> +254 704 930 307</a>	
     	<p><i>"Both the employee and employer are very hardworking definetly standout from others"</i></p>    						
     	
     	</div>
